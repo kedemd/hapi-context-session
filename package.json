@@ -1,0 +1,22 @@
+{
+  "name": "hapi-context-session",
+  "version": "1.0.1",
+  "description": "Session based context scheme for hapi-context",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kedemd/hapi-context-session"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kedem Diamant",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^2.7.2",
+    "hoek": "^2.14.0"
+  },
+  "peerDependencies": {
+    "hapi-context": ">=1.x.x"
+  }
+}
