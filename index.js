@@ -69,7 +69,7 @@ internals.endSession = function(request, beforeEndSession, afterEndSession, call
         });
     } else {
         if (!request.plugins.context || !request.plugins.context.rollback){
-            request.server.log(['cosmos','error','hapi-context-session'], "No context to rollback");
+            request.server.log(['error','hapi-context-session'], "No context to rollback");
             return callback();
         }
 
