@@ -1,6 +1,6 @@
 {
   "name": "hapi-context-session",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Session based context scheme for hapi-context",
   "main": "index.js",
   "repository": {
