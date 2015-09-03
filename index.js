@@ -73,12 +73,13 @@ internals.endSession = function(request, beforeEndSession, afterEndSession, call
             return callback();
         }
 
-        request.plugins.context.rollback(function(err){
-            // If there was an error return it
-            if (err) return callback(Boom.badImplementation("Failed while trying to rollback session",err));
+        beforeEndSession(request, function(err){
+            if (err) return callback(Boom.badImplementation("Before end session failed", err));
 
-            beforeEndSession(request, function(err){
-                if (err) return callback(Boom.badImplementation("Before end session failed", err));
+            request.plugins.context.rollback(function(err){
+                // If there was an error return it
+                if (err) return callback(Boom.badImplementation("Failed while trying to rollback session",err));
+
                 afterEndSession(request, function(err){
                     if (err) return callback(Boom.badImplementation("After end session failed", err));
                     return callback();
