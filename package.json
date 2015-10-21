@@ -1,6 +1,6 @@
 {
   "name": "hapi-context-session",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Session based context scheme for hapi-context",
   "main": "index.js",
   "repository": {
@@ -17,6 +17,6 @@
     "hoek": "^2.14.0"
   },
   "peerDependencies": {
-    "hapi-context": ">=1.x.x"
+    "hapi-context": ">=1.1.x"
   }
 }
